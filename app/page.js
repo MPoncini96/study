@@ -1,15 +1,4 @@
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "The Measure", href: "#wellbeing" },
-  { label: "Financials", href: "#financials" },
-  { label: "Staff Directory", href: "#staff-directory" },
-  { label: "Curriculum", href: "#curriculum" },
-  { label: "Athletics", href: "#athletics" },
-  { label: "Cafeteria", href: "#cafeteria" },
-  { label: "Physical Education", href: "#physical-education" },
-  { label: "Community Service", href: "#community-service" },
-  { label: "Graduate Profile", href: "#graduate-profile" }
-];
+import SiteNav from "./SiteNav";
 
 const pillars = [
   {
@@ -45,7 +34,7 @@ const measures = [
   },
   {
     title: "Work That Is Real",
-    description: "An internship where adults depend on him. A boy who is needed somewhere is harder to lose."
+    description: "One day a week inside real work, where he can try on a calling before he has to choose one. Purpose is not handed to a young man. He finds it by testing himself against things that matter."
   }
 ];
 
@@ -396,16 +385,7 @@ function PageSection({ id, eyebrow, title, description, cards, placeholderTitle,
 export default function HomePage() {
   return (
     <>
-      <header className="site-nav">
-        <div className="nav-shell">
-          <a className="brand" href="#home">Saint Carlo Acutis High School</a>
-          <nav className="nav-links" aria-label="Primary">
-            {navItems.map((item) => (
-              <a key={item.href} href={item.href}>{item.label}</a>
-            ))}
-          </nav>
-        </div>
-      </header>
+      <SiteNav />
 
       <main className="page-shell" id="home">
         <section className="hero hero-offset">
@@ -469,10 +449,6 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <p className="measure-note">
-            If you or a young man you know is struggling, call or text 988 in the United States to reach the Suicide
-            and Crisis Lifeline, any hour of any day.
-          </p>
           <Why items={evidence.wellbeing} />
         </section>
 
