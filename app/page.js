@@ -178,7 +178,7 @@ export default function HomePage() {
         <section className="hero hero-offset">
           <div className="hero-copy">
             <p className="eyebrow">Saint Carlo Acutis High School</p>
-            <h1>Forming disciplined, capable, and faithful young men.</h1>
+            <h1>A blueprint for a modern education.</h1>
             <p className="hero-text">
               An all-male work-study school built around scholarship, daily training, and spiritual formation.
             </p>
