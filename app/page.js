@@ -171,6 +171,14 @@ const evidence = {
     },
     {
       counterpoint: true,
+      finding: "The sharper risk is not academic, it is cultural. Following young men over six months, researchers found that the masculine norms of toughness and anti-femininity predicted more substance use, more hostility, and - most seriously - less willingness to seek mental health care, an effect strongest among the men who were already depressed. A meta-analysis of 78 samples found the same for self-reliance. Striving and achievement did not carry this cost: men who endorsed status and winning reported fewer depressive symptoms and sought help more readily. An all-male school is a container, not a cure. It concentrates whatever culture is put in it. We hold the standards and reject the stoicism, and we treat asking for help as something a strong man does.",
+      authors: "Sileo, K. M., & Kershaw, T. S.",
+      year: 2020,
+      venue: "American Journal of Men's Health, 14(1)",
+      pdf: "/research/masculine-norms.pdf"
+    },
+    {
+      counterpoint: true,
       finding: "The largest meta-analysis on this question - 184 studies, 1.6 million students - found that once selection effects are controlled, single-sex schooling shows no reliable academic advantage over coeducation. We accept that finding. It does not trouble us, because test scores are not what we are optimising for - see The Measure.",
       authors: "Pahlke, E., Hyde, J. S., & Allison, C. M.",
       year: 2014,
