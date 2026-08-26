@@ -201,11 +201,18 @@ const evidence = {
       pdf: "/research/pa-depression.pdf"
     },
     {
-      finding: "Adolescents with higher personal religiosity reported significantly lower substance use, with the protective effect operating through stronger self-control and lower association with substance-using peers. Note: this study sampled adolescents in China, so the mechanism transfers more confidently than the exact effect size does.",
-      authors: "Li, S. D., Lu, J., & Chen, Y.",
-      year: 2022,
-      venue: "International Journal of Environmental Research and Public Health, 19(18)",
-      pdf: "/research/religiosity-substance.pdf"
+      finding: "Following roughly 7,000 American adolescents for 8 to 14 years, those who attended religious services at least weekly reported greater life satisfaction, more positive affect, a stronger sense of mission, and lower rates of drug use and early sexual initiation as young adults. Notably, weekly attendance did not significantly reduce depressive symptoms - but private prayer did. Communal worship and silent prayer appear to protect different things, which is why we keep both Mass and confession in the daily order.",
+      authors: "Chen, Y., & VanderWeele, T. J.",
+      year: 2018,
+      venue: "American Journal of Epidemiology, 187(11)",
+      pdf: "/research/religious-upbringing.pdf"
+    },
+    {
+      finding: "Across 43,141 men followed for 26 years, those attending religious services at least weekly had a 48 percent lower rate of death by suicide (HR 0.52) and a 33 percent lower rate of death from suicide, drugs, or alcohol combined. This is the single largest effect we have found on the outcome we care most about.",
+      authors: "Chen, Y., Koh, H. K., Kawachi, I., Botticelli, M., & VanderWeele, T. J.",
+      year: 2020,
+      venue: "JAMA Psychiatry, 77(7)",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7203669/"
     },
     {
       finding: "School connectedness continued to predict better adolescent mental health even when students were physically separated during remote learning - evidence that the protective factor is the relationship, not the building.",
@@ -216,7 +223,7 @@ const evidence = {
     },
     {
       counterpoint: true,
-      finding: "None of this is proof. These are observational studies: they show that connected, active, mentored, believing young men fare better, not that a school built this way causes that outcome. No one has run the trial we would need. We are making a considered bet on the strongest available evidence, and we intend to measure whether it holds.",
+      finding: "None of this is proof. These are observational studies: they show that connected, active, mentored, believing young men fare better, not that a school built this way causes that outcome. One gap matters most to us. These studies measured young men who chose to attend, or whose families did. Nobody has measured required attendance, and a boy compelled to a faith he does not hold may get none of this benefit. That is an argument for winning genuine assent rather than counting heads at the door.",
       authors: "A note on what this evidence can and cannot carry",
       year: 2026,
       venue: "Our reading of the literature above",
