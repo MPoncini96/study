@@ -412,3 +412,108 @@ main[id] {
     padding: 9px 12px;
   }
 }
+
+/* Why: research evidence disclosures */
+.why {
+  margin-top: 26px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.why-toggle {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+  padding: 9px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.why-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.why-toggle:hover,
+.why-toggle:focus-visible {
+  border-color: var(--gold);
+  background: rgba(168, 116, 42, 0.08);
+}
+
+.why-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.76rem;
+  color: var(--gold);
+}
+
+.why-label::after {
+  content: " +";
+}
+
+.why[open] .why-label::after {
+  content: " \2212";
+}
+
+.why-hint {
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.why-list {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.why-item {
+  border-left: 2px solid var(--gold);
+  padding: 2px 0 2px 16px;
+}
+
+.why-counter {
+  border-left-color: var(--green);
+}
+
+.why-flag {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  color: var(--green);
+}
+
+.why-finding {
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.why-cite {
+  margin: 0 0 6px;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.why-links {
+  margin: 0;
+  font-size: 0.84rem;
+}
+
+.why-links a {
+  color: var(--gold);
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .why-toggle {
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 16px;
+  }
+}

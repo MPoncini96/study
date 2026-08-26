@@ -133,7 +133,130 @@ const sectionCards = {
   ]
 };
 
-function PageSection({ id, eyebrow, title, description, cards, placeholderTitle, placeholderText }) {
+const evidence = {
+  foundation: [
+    {
+      finding: "Following one quarter of the 1958 British birth cohort, single-sex schooling showed no penalty in later labour market outcomes and was linked to stronger performance in subjects usually stereotyped for the other sex.",
+      authors: "Sullivan, A., Joshi, H., & Leonard, D.",
+      year: 2011,
+      venue: "Oxford Review of Education",
+      pdf: "/research/single-sex-outcomes.pdf"
+    },
+    {
+      finding: "A study of US secondary schools found single-sex schooling associated with higher test scores, with the clearest gains for students who were already academically engaged.",
+      authors: "Billger, S. M.",
+      year: 2006,
+      venue: "IZA Discussion Paper No. 2037",
+      pdf: "/research/single-sex-iza.pdf"
+    },
+    {
+      counterpoint: true,
+      finding: "The largest meta-analysis on this question - 184 studies, 1.6 million students - found that once selection effects are controlled, single-sex schooling shows no reliable academic advantage over coeducation. Our case rests on formation and culture, not on a test-score claim.",
+      authors: "Pahlke, E., Hyde, J. S., & Allison, C. M.",
+      year: 2014,
+      venue: "Psychological Bulletin, 140(4)",
+      link: "https://doi.org/10.1037/a0035740"
+    }
+  ],
+  rhythm: [
+    {
+      finding: "A systematic review of physical activity interventions in schools found significant improvement in academic achievement versus controls, with the strongest and most consistent effects in mathematics.",
+      authors: "Loturco, I., Montoya, N. P., Ferraz, M. B., Berbat, V., & Pereira, L. A.",
+      year: 2022,
+      venue: "Education Sciences, 12(8)",
+      pdf: "/research/pa-academic-skills.pdf"
+    },
+    {
+      counterpoint: true,
+      finding: "Adolescent sleep research is the strongest argument against our 5:20 arrival. The American Academy of Pediatrics recommends secondary schools start no earlier than 8:30 a.m., and teens need 8-10 hours of sleep. An early rise only works if the day also ends early enough to protect that sleep.",
+      authors: "American Academy of Pediatrics, Adolescent Sleep Working Group",
+      year: 2014,
+      venue: "Pediatrics, 134(3)",
+      link: "https://doi.org/10.1542/peds.2014-1697"
+    }
+  ],
+  workStudy: [
+    {
+      finding: "Using admissions lotteries across 16 stand-alone technical high schools, this study found that students admitted to a work-integrated technical high school were more likely to graduate, and earned roughly 31 percent more in the years after school, than comparable students who were not admitted.",
+      authors: "Brunner, E. J., Dougherty, S. M., & Ross, S. L.",
+      year: 2021,
+      venue: "Annenberg EdWorkingPaper No. 19-112",
+      pdf: "/research/cte-connecticut.pdf"
+    }
+  ],
+  learning: [
+    {
+      finding: "A systematic review of 50 classroom studies found that retrieval practice - having students recall material rather than review it - improved learning in 57 percent of experiments, across grade levels, subjects, and student populations.",
+      authors: "Agarwal, P. K., Nunes, L. D., & Blunt, J. R.",
+      year: 2021,
+      venue: "Educational Psychology Review, 33",
+      pdf: "/research/retrieval-benefits.pdf"
+    },
+    {
+      finding: "A decade-long review of retrieval-based learning research: the act of reconstructing knowledge from memory, through testing and public demonstration, produces more durable learning than rereading or reviewing notes.",
+      authors: "Karpicke, J. D.",
+      year: 2017,
+      venue: "Learning and Memory: A Comprehensive Reference",
+      pdf: "/research/retrieval-decade.pdf"
+    }
+  ],
+  service: [
+    {
+      finding: "A study of high school service-learning found that structured, sustained programs - not one-off volunteering - produced measurable gains in civic knowledge, civic engagement, and students' sense of responsibility to their community.",
+      authors: "Billig, S., Root, S., & Jesse, D.",
+      year: 2005,
+      venue: "CIRCLE Working Paper 33",
+      pdf: "/research/service-learning.pdf"
+    }
+  ],
+  graduate: [
+    {
+      finding: "Character skills - perseverance, self-control, conscientiousness - predict later earnings, health, and civic outcomes as strongly as measured intelligence, and they remain malleable through the adolescent years when cognitive scores have largely stabilized.",
+      authors: "Kautz, T., Heckman, J. J., Diris, R., ter Weel, B., & Borghans, L.",
+      year: 2014,
+      venue: "NBER Working Paper No. 20749",
+      pdf: "/research/character-skills.pdf"
+    },
+    {
+      finding: "Noncognitive ability has effects on wages, schooling attainment, and social behavior comparable in size to cognitive ability - evidence that what a school forms in a young man matters as much as what it teaches him.",
+      authors: "Heckman, J. J., Stixrud, J., & Urzua, S.",
+      year: 2006,
+      venue: "NBER Working Paper No. 12006",
+      pdf: "/research/noncog-labor.pdf"
+    }
+  ]
+};
+
+function Why({ items }) {
+  return (
+    <details className="why">
+      <summary className="why-toggle">
+        <span className="why-label">Why</span>
+        <span className="why-hint">The research behind this</span>
+      </summary>
+      <ul className="why-list">
+        {items.map((item) => (
+          <li className={item.counterpoint ? "why-item why-counter" : "why-item"} key={item.venue}>
+            {item.counterpoint ? <p className="why-flag">Counterpoint we take seriously</p> : null}
+            <p className="why-finding">{item.finding}</p>
+            <p className="why-cite">
+              {item.authors} ({item.year}). <cite>{item.venue}</cite>.
+            </p>
+            <p className="why-links">
+              {item.pdf ? (
+                <a href={item.pdf} target="_blank" rel="noreferrer">Read the paper (PDF)</a>
+              ) : (
+                <a href={item.link} target="_blank" rel="noreferrer">View the source</a>
+              )}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}
+
+function PageSection({ id, eyebrow, title, description, cards, placeholderTitle, placeholderText, evidenceItems }) {
   return (
     <section className="section section-page" id={id}>
       <div className="section-heading page-heading">
@@ -156,6 +279,7 @@ function PageSection({ id, eyebrow, title, description, cards, placeholderTitle,
           <p>{placeholderText}</p>
         </aside>
       </div>
+      {evidenceItems ? <Why items={evidenceItems} /> : null}
     </section>
   );
 }
@@ -214,6 +338,7 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+          <Why items={evidence.foundation} />
         </section>
 
         <section className="section split-layout">
@@ -236,6 +361,7 @@ export default function HomePage() {
             <p className="schedule-note">
               The internship block shows the work-study day. The class blocks show the four academic days.
             </p>
+            <Why items={evidence.rhythm} />
           </div>
 
           <div className="panel quote-panel">
@@ -255,6 +381,7 @@ export default function HomePage() {
                 <li key={difference}>{difference}</li>
               ))}
             </ul>
+            <Why items={evidence.workStudy} />
           </div>
         </section>
 
@@ -277,6 +404,7 @@ export default function HomePage() {
               <p>Each student keeps a journal and writes a record of his four years.</p>
             </div>
           </div>
+          <Why items={evidence.learning} />
         </section>
 
         <PageSection
@@ -347,6 +475,7 @@ export default function HomePage() {
           cards={sectionCards.communityService}
           placeholderTitle="Students serving the community"
           placeholderText="Add an image of students volunteering, building, or serving alongside others."
+          evidenceItems={evidence.service}
         />
 
         <PageSection
@@ -357,6 +486,7 @@ export default function HomePage() {
           cards={sectionCards.graduate}
           placeholderTitle="Graduate outcome portrait"
           placeholderText="Add an image of a mature graduate or closing milestone moment here."
+          evidenceItems={evidence.graduate}
         />
 
         <section className="closing-card">
