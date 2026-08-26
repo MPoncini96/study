@@ -1,5 +1,6 @@
 const navItems = [
   { label: "Home", href: "#home" },
+  { label: "The Measure", href: "#wellbeing" },
   { label: "Financials", href: "#financials" },
   { label: "Staff Directory", href: "#staff-directory" },
   { label: "Curriculum", href: "#curriculum" },
@@ -26,6 +27,25 @@ const pillars = [
   {
     title: "Independent Scholarship",
     description: "Students learn actively through study, exams, presentations, and discussion."
+  }
+];
+
+const measures = [
+  {
+    title: "Brotherhood Over Isolation",
+    description: "A small cohort where every student is known by name by adults who do not rotate out. Isolation is the risk we design hardest against."
+  },
+  {
+    title: "Faith as an Anchor",
+    description: "Daily Mass, confession, and chaplaincy give a student somewhere to put despair other than inward."
+  },
+  {
+    title: "A Body That Is Trained",
+    description: "Physical training every morning, not as a sport for the talented few, but as daily maintenance of a young man's mind."
+  },
+  {
+    title: "Work That Is Real",
+    description: "An internship where adults depend on him. A boy who is needed somewhere is harder to lose."
   }
 ];
 
@@ -151,11 +171,56 @@ const evidence = {
     },
     {
       counterpoint: true,
-      finding: "The largest meta-analysis on this question - 184 studies, 1.6 million students - found that once selection effects are controlled, single-sex schooling shows no reliable academic advantage over coeducation. Our case rests on formation and culture, not on a test-score claim.",
+      finding: "The largest meta-analysis on this question - 184 studies, 1.6 million students - found that once selection effects are controlled, single-sex schooling shows no reliable academic advantage over coeducation. We accept that finding. It does not trouble us, because test scores are not what we are optimising for - see The Measure.",
       authors: "Pahlke, E., Hyde, J. S., & Allison, C. M.",
       year: 2014,
       venue: "Psychological Bulletin, 140(4)",
       link: "https://doi.org/10.1037/a0035740"
+    }
+  ],
+  wellbeing: [
+    {
+      finding: "Following a national US cohort from adolescence into adulthood (ages 24-32), students who felt connected at school and at home had 48 to 66 percent lower odds of suicidal ideation as adults, and significantly lower odds of prescription drug misuse, other illicit drug use, and emotional distress.",
+      authors: "Steiner, R. J., Sheremenko, G., Lesesne, C., Dittus, P. J., Sieving, R. E., & Ethier, K. A.",
+      year: 2019,
+      venue: "Pediatrics, 144(1)",
+      pdf: "/research/connectedness-adult.pdf"
+    },
+    {
+      finding: "Students who reported a natural mentor - a trusted, non-parental adult already present in their lives - showed better psychological, academic, and behavioural outcomes across 30 studies. The effect held strongest for youth facing the most adversity.",
+      authors: "Van Dam, L., Smit, D., Wildschut, B., Branje, S. J. T., Rhodes, J. E., Assink, M., & Stams, G. J. J. M.",
+      year: 2018,
+      venue: "American Journal of Community Psychology, 62(1-2)",
+      pdf: "/research/mentoring-meta.pdf"
+    },
+    {
+      finding: "In a prospective study of adolescents, each additional hour of weekly physical activity predicted lower depressive symptoms, with the association holding after adjusting for prior mental health and social background.",
+      authors: "Rothon, C., Edwards, P., Bhui, K., Viner, R. M., Taylor, S., & Stansfeld, S. A.",
+      year: 2010,
+      venue: "BMC Medicine, 8(32)",
+      pdf: "/research/pa-depression.pdf"
+    },
+    {
+      finding: "Adolescents with higher personal religiosity reported significantly lower substance use, with the protective effect operating through stronger self-control and lower association with substance-using peers. Note: this study sampled adolescents in China, so the mechanism transfers more confidently than the exact effect size does.",
+      authors: "Li, S. D., Lu, J., & Chen, Y.",
+      year: 2022,
+      venue: "International Journal of Environmental Research and Public Health, 19(18)",
+      pdf: "/research/religiosity-substance.pdf"
+    },
+    {
+      finding: "School connectedness continued to predict better adolescent mental health even when students were physically separated during remote learning - evidence that the protective factor is the relationship, not the building.",
+      authors: "Perkins, K. N., Carey, K., Lincoln, E., et al.",
+      year: 2021,
+      venue: "The Journal of Primary Prevention, 42",
+      pdf: "/research/connectedness-matters.pdf"
+    },
+    {
+      counterpoint: true,
+      finding: "None of this is proof. These are observational studies: they show that connected, active, mentored, believing young men fare better, not that a school built this way causes that outcome. No one has run the trial we would need. We are making a considered bet on the strongest available evidence, and we intend to measure whether it holds.",
+      authors: "A note on what this evidence can and cannot carry",
+      year: 2026,
+      venue: "Our reading of the literature above",
+      link: "https://www.cdc.gov/youth-behavior-survey/"
     }
   ],
   rhythm: [
@@ -339,6 +404,32 @@ export default function HomePage() {
             ))}
           </div>
           <Why items={evidence.foundation} />
+        </section>
+
+        <section className="section measure-section" id="wellbeing">
+          <div className="section-heading">
+            <p className="eyebrow">The Measure</p>
+            <h2>We do not measure this school in test scores.</h2>
+            <p className="section-intro">
+              A school can post excellent numbers and still graduate young men who are anxious, isolated, medicated, or
+              dead. Those numbers are not the point. We measure ourselves by whether our graduates are alive, sober,
+              anchored, and able to carry weight - and we build the day around the things that most reliably protect
+              a young man from losing those.
+            </p>
+          </div>
+          <div className="measure-grid">
+            {measures.map((measure) => (
+              <article className="panel" key={measure.title}>
+                <h3>{measure.title}</h3>
+                <p>{measure.description}</p>
+              </article>
+            ))}
+          </div>
+          <p className="measure-note">
+            If you or a young man you know is struggling, call or text 988 in the United States to reach the Suicide
+            and Crisis Lifeline, any hour of any day.
+          </p>
+          <Why items={evidence.wellbeing} />
         </section>
 
         <section className="section split-layout">

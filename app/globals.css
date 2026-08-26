@@ -517,3 +517,41 @@ main[id] {
     border-radius: 16px;
   }
 }
+
+/* The Measure: wellbeing thesis section */
+.measure-section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+}
+
+.measure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.measure-grid .panel {
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.measure-note {
+  margin: 22px 0 0;
+  padding: 14px 18px;
+  border-left: 2px solid var(--green);
+  background: rgba(41, 67, 59, 0.06);
+  border-radius: 0 12px 12px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .measure-section {
+    padding: 22px;
+    border-radius: 20px;
+  }
+}
