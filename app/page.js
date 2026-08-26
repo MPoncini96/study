@@ -188,6 +188,35 @@ const evidence = {
   ],
   wellbeing: [
     {
+      finding: "A randomised trial gives this the firmest footing we have. 174 young people with depression and loneliness were assigned either to cognitive behaviour therapy or to a programme built purely on establishing group belonging. Both worked - but when connection was later threatened, the belonging group held up significantly better against relapse into depression and loneliness. Building a young man into a group is not a soft substitute for treatment. It performed like treatment.",
+      authors: "Cruwys, T., Haslam, C., Rathbone, J. A., Williams, E., & Haslam, S. A.",
+      year: 2021,
+      venue: "Journal of Affective Disorders, 295",
+      pdf: "/research/groups4health.pdf"
+    },
+    {
+      finding: "Tracking 310 children from age 11 to 14 by mapping their actual social networks, isolation from any clique predicted depressive symptoms three years later, through loneliness. The effect held after controlling for earlier depression, peer rejection, and even friendlessness - meaning belonging to a group protects something that having a friend alone does not. This is the precise thing a house or a cohort is for.",
+      authors: "Witvliet, M., Brendgen, M., van Lier, P. A. C., Koot, H. M., & Vitaro, F.",
+      year: 2010,
+      venue: "Journal of Abnormal Child Psychology, 38(8)",
+      pdf: "/research/clique-isolation.pdf"
+    },
+    {
+      finding: "Hundreds of interviews across adolescence found that boys in their early and middle teens describe deep, emotionally open friendships with other boys and say plainly that they need them. By late adolescence many report losing exactly those friendships, giving the reason themselves: they are expected to man up, grow independent, and avoid anything that might read as feminine. Brotherhood is not us imposing closeness on boys. It is refusing to take from them something they already have and are otherwise on course to lose.",
+      authors: "Way, N.",
+      year: 2013,
+      venue: "Journal of Research on Adolescence, 23(2); see also Deep Secrets (Harvard University Press, 2011)",
+      link: "https://doi.org/10.1111/jora.12047"
+    },
+    {
+      counterpoint: true,
+      finding: "A dense peer group transmits harm as readily as help. Examining 3,027 Australians aged 10 to 24 who died by suicide, researchers confirmed that deaths cluster in time and place, with exposure to another's suicide a defining feature of cluster members. The related literature on peer contagion shows that concentrating adolescents together can amplify problem behaviour rather than correct it. Brotherhood is not self-regulating. It is why our adults are embedded in the cohort rather than supervising it from outside, and why a postvention plan is not optional for a school like ours.",
+      authors: "Hill, N. T. M., Too, L. S., Spittal, M. J., & Robinson, J.",
+      year: 2020,
+      venue: "Epidemiology and Psychiatric Sciences, 29",
+      pdf: "/research/suicide-clusters.pdf"
+    },
+    {
       finding: "Following a national US cohort from adolescence into adulthood (ages 24-32), students who felt connected at school and at home had 48 to 66 percent lower odds of suicidal ideation as adults, and significantly lower odds of prescription drug misuse, other illicit drug use, and emotional distress.",
       authors: "Steiner, R. J., Sheremenko, G., Lesesne, C., Dittus, P. J., Sieving, R. E., & Ethier, K. A.",
       year: 2019,
