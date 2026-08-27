@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Home", href: "/#home" },
-  { label: "Our Patron", href: "/saint" },
+  { label: "Carlo Acutis", href: "/saint" },
   { label: "The Measure", href: "/#wellbeing" },
   { label: "Financials", href: "/#financials" },
   { label: "Staff Directory", href: "/#staff-directory" },

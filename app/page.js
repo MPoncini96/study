@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SiteNav from "./SiteNav";
 
 const pillars = [
@@ -395,6 +396,10 @@ export default function HomePage() {
             <p className="hero-text">
               An all-male work-study school built around scholarship, daily training, and spiritual formation.
             </p>
+            <p className="hero-patron">
+              Named for a fifteen-year-old who taught himself to code and gave it to the Church.{" "}
+              <Link href="/saint">Meet our patron &rarr;</Link>
+            </p>
           </div>
           <div className="hero-visual">
             <div className="hero-card">
@@ -604,7 +609,8 @@ export default function HomePage() {
           <p className="eyebrow">Our Mission</p>
           <h2>To graduate men with discipline, faith, stamina, and practical experience.</h2>
           <p>
-            Saint Carlo Acutis High School prepares young men for responsibility, leadership, and meaningful work.
+            <Link href="/saint">Saint Carlo Acutis</Link> High School prepares young men for responsibility,
+            leadership, and meaningful work.
           </p>
         </section>
       </main>
